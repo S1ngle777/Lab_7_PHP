@@ -34,8 +34,9 @@
                 <th>Observatii</th>
             </tr>
             <?php
-                $myData=fopen("admin/data/dateRezervari.txt", "r")or die("Nu a fost gasit fisierul!");
-                while(!feof($myData))
+                
+                $myData = fopen(__DIR__ . "/data/dateRezervari.txt", "r") or die("Nu a fost gasit fisierul!");
+                while (!feof($myData))
                 {
                     echo "<tr>";
                     $record=trim(fgets($myData));
